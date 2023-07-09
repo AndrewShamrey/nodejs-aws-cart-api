@@ -18,3 +18,12 @@ export type Order = {
   status: string;
   total: number;
 }
+
+export enum OrderStatus {
+  OPEN = 'OPEN',
+  APPROVED = 'APPROVED',
+  CONFIRMED = 'CONFIRMED',
+  SENT = 'SENT',
+  COMPLETED = 'COMPLETED',
+  CANCELLED = 'CANCELLED',
+}
