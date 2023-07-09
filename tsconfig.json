@@ -1,15 +1,24 @@
 {
   "compilerOptions": {
     "module": "commonjs",
+    "moduleResolution": "node",
+    "lib": ["es2019", "es2020"],
     "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "target": "es2017",
     "sourceMap": true,
     "outDir": "./dist",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "baseUrl": "./",
-    "incremental": true
-  }
+    "incremental": true,
+    "typeRoots": ["./node_modules/@types"]
+  },
+  "include": ["./**/*.ts"],
+  "exclude": ["node_modules/**/*"]
 }
