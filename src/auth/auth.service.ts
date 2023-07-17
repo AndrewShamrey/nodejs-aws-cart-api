@@ -46,7 +46,7 @@ export class AuthService {
     console.log(user);
 
     function encodeUserToken(user) {
-      const { id, name, password } = user;
+      const { name, password } = user;
       const buf = Buffer.from([name, password].join(':'), 'utf8');
 
       return buf.toString('base64');
