@@ -8,6 +8,17 @@ module.exports = (options, webpack) => {
 
   return {
     ...options,
+    entry: './src/eb.ts',
+    externals: [
+      'pg-native',
+      'sqlite3',
+      'pg-query-stream',
+      'oracledb',
+      'better-sqlite3',
+      'tedious',
+      'mysql',
+      'mysql2',
+    ],
     optimization: {
       minimizer: [
         new TerserPlugin({
