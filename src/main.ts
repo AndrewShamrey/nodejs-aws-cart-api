@@ -12,7 +12,7 @@ async function bootstrap(): Promise<Handler> {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin: (req, callback) => callback(null, true),
+    origin: (_, callback) => callback(null, true),
   });
   app.use(helmet());
   await app.init();
